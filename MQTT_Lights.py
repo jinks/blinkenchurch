@@ -1,58 +1,5 @@
 #!/usr/bin/env python
 #
-# Python Script for controlling VBS lighting modules from a Raspberry Pi
-#
-# Written By Les Holdeman 02/2018 using Python documentation:
-# smbus - https://pypi.python.org/pypi/smbus2/0.2.0
-# socket - https://docs.python.org/2/library/socket.html
-# time - https://docs.python.org/2/library/time.html modules
-# And other sources:
-# http://www.steves-internet-guide.com/into-mqtt-python-client/
-# paho.mqtt.client - https://www.eclipse.org/paho/
-#
-#
-# Commands for various colors of each LED 
-# LED 1 Red		-	<addr> 0x14 0x01
-# LED 1 Green		-	<addr> 0x14 0x02
-# LED 1 Yellow		-	<addr> 0x14 0x03
-# LED 1 Blue		-	<addr> 0x14 0x04
-# LED 1 Purple		-	<addr> 0x14 0x05
-# LED 1 Light Blue	-	   <addr> 0x14 0x06
-# LED 1 White		-	<addr> 0x14 0x07
-#
-# LED 2 Red		-	<addr> 0x14 0x08
-# LED 2 Green 		-	<addr> 0x14 0x10
-# LED 2 Yellow		-	<addr> 0x14 0x18
-# LED 2 Blue		-	<addr> 0x14 0x20
-# LED 2 Purple		-	<addr> 0x14 0x28
-# LED 2 Light Blue	-	   <addr> 0x14 0x30
-# LED 2 White		-	<addr> 0x14 0x38
-#
-# LED 3 Red		-	<addr> 0x14 0x40
-# LED 3 Green		-	<addr> 0x14 0x80
-# LED 3 Yellow		-	<addr> 0x14 0xC0
-# LED 3 Blue		-	<addr> 0x15 0x01
-# LED 3 Purple		-	<addr> 0x14 0x40 and <addr> 0x15 0x01
-# LED 3 Light Blue	-	   <addr> 0x14 0x80 and <addr> 0x15 0x01
-# LED 3 White		-	<addr> 0x14 0xC0 and <addr> 0x15 0x01
-#
-# LED 4 Red		-	<addr> 0x15 0x02
-# LED 4 Green		-	<addr> 0x15 0x04
-# LED 4 Yellow		-	<addr> 0x15 0x06
-# LED 4 Blue		-	<addr> 0x15 0x08
-# LED 4 Purple		-	<addr> 0x15 0x0A
-# LED 4 Light Blue	-	   <addr> 0x15 0x0C
-# LED 4 White		-	<addr> 0x15 0x0E
-#
-# LED 5 Red     -      	<addr> 0x15 0x10
-# LED 5 Green		-	<addr> 0x15 0x20
-# LED 5 Yellow		-	<addr> 0x15 0x30
-# LED 5 Blue		-	<addr> 0x15 0x40
-# LED 5 Purple		-	<addr> 0x15 0x50
-# LED 5 Light Blue	-	   <addr> 0x15 0x60
-# LED 5 White		-	<addr> 0x15 0x70
-#
-# Standby LEDs		-	<addr> 0x15 0x80
 
 #imports
 import smbus
